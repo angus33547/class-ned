@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Escape Velocity by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="index.html">經銷據點</a></h1>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">首頁</a></li>
+								<li><a href="right-sidebar - 02.html">最新消息</a></li>
+								<li class="current">
+									<a href="no-sidebar.html">車款介紹</a>
+									<ul>
+										<li><a href="#">電動車</a></li>
+										<li><a href="#">100~249CC</a></li>
+										<li><a href="#">250~549CC</a></li>
+										<li><a href="#">550CC~</a></li>
+									</ul>
+								</li>
+								<li><a href="right-sidebar.html">服務專區</a>
+								    <ul>
+										<li><a href="right-sidebar.html">保證事項</a></li>
+										<li><a href="#">保養指南</a></li>
+										<li><a href="#">下載專區</a></li>
+										<li><a href="#">相關影片</a></li>
+										<li><a href="#">促銷優惠</a></li>
+									</ul>
+								</li>
+								<li><a href="no-sidebar 02.html">經銷據點</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title">經銷據點</div>
+					<div class="container">
+					<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        h1 {
+            text-align: center;
+            color: #478bf8;
+            margin-bottom: 1em;
+        }
+
+        .store-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+            margin-bottom: 2em;
+        }
+
+        .store-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 1em;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .store-card:hover {
+            transform: scale(1.05);
+        }
+
+        .store-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #478bf8;
+            margin-bottom: 1em;
+        }
+
+        .store-address {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 1.5em;
+        }
+
+        .view-map-btn {
+            padding: 0.6em 1.2em;
+            background-color: #478bf8;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .view-map-btn:hover {
+            background-color: #356ab1;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 2em;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="font-size: 20px;">我們的分店</h1>
+
+        <div class="store-list">
+            <!-- 分店卡片 1 -->
+            <div class="store-card" onclick="showMap(25.0330, 121.5654, '台北市分店')">
+                <div class="store-name">二輪世界-萬華店</div>
+                <div class="store-address">台北市艋舺大道23號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+
+            <!-- 分店卡片 2 -->
+            <div class="store-card" onclick="showMap(24.7759, 120.9943, '台中市分店')">
+                <div class="store-name">榮秋重車</div>
+                <div class="store-address">台北市內湖區新明路129號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+
+            <!-- 分店卡片 3 -->
+            <div class="store-card" onclick="showMap(22.6273, 120.3014, '高雄市分店')">
+                <div class="store-name">重輪車業</div>
+                <div class="store-address">台北市北投區崇仁路一段21號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+        </div>
+
+		<div class="store-list">
+            <!-- 分店卡片 1 -->
+            <div class="store-card" onclick="showMap(25.0330, 121.5654, '台北市分店')">
+                <div class="store-name">金利欣重車</div>
+                <div class="store-address">台北市士林區福港街95號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+
+            <!-- 分店卡片 2 -->
+            <div class="store-card" onclick="showMap(24.7759, 120.9943, '台中市分店')">
+                <div class="store-name">三育機車有限公司</div>
+                <div class="store-address">台北市文山區景隆街42、54、56號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+
+            <!-- 分店卡片 3 -->
+            <div class="store-card" onclick="showMap(22.6273, 120.3014, '高雄市分店')">
+                <div class="store-name">正宇車業</div>
+                <div class="store-address">台中市豐原區圓環東路151號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+        </div>
+
+		<div class="store-list">
+            <!-- 分店卡片 1 -->
+            <div class="store-card" onclick="showMap(25.0330, 121.5654, '台北市分店')">
+                <div class="store-name">元輪車業</div>
+                <div class="store-address">台中市西區西屯路二段9-1號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+
+            <!-- 分店卡片 2 -->
+            <div class="store-card" onclick="showMap(24.7759, 120.9943, '台中市分店')">
+                <div class="store-name">中驥重車</div>
+                <div class="store-address">台中市西屯區福雅路255之7號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+
+            <!-- 分店卡片 3 -->
+            <div class="store-card" onclick="showMap(22.6273, 120.3014, '高雄市分店')">
+                <div class="store-name">大都會機車行</div>
+                <div class="store-address">台中市北區崇德路一段413號</div>
+                <button class="view-map-btn">查看地圖</button>
+            </div>
+        </div>
+
+        <!-- 地圖顯示區域 -->
+        <div id="map"></div>
+    </div>
+
+    <script>
+        let map;
+
+        function initMap(lat, lng, storeName) {
+            // 設定地圖顯示的基本資訊
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: { lat: lat, lng: lng },
+            });
+
+            // 創建標記
+            new google.maps.Marker({
+                position: { lat: lat, lng: lng },
+                map: map,
+                title: storeName,
+            });
+        }
+
+        function showMap(lat, lng, storeName) {
+            initMap(lat, lng, storeName);
+        }
+    </script>
+
+    <!-- Google Maps API Key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+
+							
+							
+				
+					
+
+
+	</body>
+</html>

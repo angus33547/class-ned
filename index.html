@@ -13,79 +13,251 @@
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
-
 			<!-- Header -->
-				<section id="header" class="wrapper">
+			<a href="#" class="image featured">
+				<img src="banner.jpg" alt="" />
+			</a>
+			<style>
+				* {box-sizing: border-box}
+				body {font-family: Verdana, sans-serif; margin:0}
+				.mySlides {display: none}
+				img {vertical-align: middle;}
+				
+				/* Slideshow container */
+				.slideshow-container {
+				  max-width: 2048px;
+				  position: relative;
+				  height: 573px; /* 固定高度 */
+				  margin:  auto; /* 水平居中 */
+				  overflow: hidden; /* 隱藏超出部分 */
+                  background-color: #000; /* 添加背景色 */
+				}
 
+				
+                /* 幻燈片圖片 */
+.mySlides img {
+  width: 1000%; /* 圖片寬度填滿容器 */
+  height: 600px; /* 圖片高度自適應容器 */
+  object-fit: cover; /* 圖片等比例裁剪，填滿容器 */
+}
+				/* Next & previous buttons */
+				.prev, .next {
+				  cursor: pointer;
+				  position: absolute;
+				  top: 50%;
+				  width: auto;
+				  padding: 16px;
+				  margin-top: -22px;
+				  color: white;
+				  font-weight: bold;
+				  font-size: 18px;
+				  transition: 0.6s ease;
+				  border-radius: 0 3px 3px 0;
+				  user-select: none;
+				}
+				
+				/* Position the "next button" to the right */
+				.next {
+				  right: 0;
+				  border-radius: 3px 0 0 3px;
+				}
+				
+				/* On hover, add a black background color with a little bit see-through */
+				.prev:hover, .next:hover {
+				  background-color: rgba(0,0,0,0.8);
+				}
+				
+				/* Caption text */
+				.text {
+				  color: #f2f2f2;
+				  font-size: 15px;
+				  padding: 8px 12px;
+				  position: absolute;
+				  bottom: 8px;
+				  width: 100%;
+				  text-align: center;
+				}
+				
+				/* Number text (1/3 etc) */
+				.numbertext {
+				  color: #f2f2f2;
+				  font-size: 12px;
+				  padding: 8px 12px;
+				  position: absolute;
+				  top: 0;
+				}
+				
+				/* The dots/bullets/indicators */
+				.dot {
+				  cursor: pointer;
+				  height: 15px;
+				  width: 15px;
+				  margin: 0 2px;
+				  background-color: #bbb;
+				  border-radius: 50%;
+				  display: inline-block;
+				  transition: background-color 0.6s ease;
+				}
+				
+				.active, .dot:hover {
+				  background-color: #717171;
+				}
+				
+				/* Fading animation */
+				.fade {
+				  animation-name: fade;
+				  animation-duration: 1.5s;
+				}
+				
+				@keyframes fade {
+				  from {opacity: .4} 
+				  to {opacity: 1}
+				}
+				
+				/* On smaller screens, decrease text size */
+				@media only screen and (max-width: 300px) {
+				  .prev, .next,.text {font-size: 11px}
+				}
+				</style>
+				</head>
+				<body style="background-color:rgb(59, 58, 58);">
+					<div class="slideshow-container">
+				
+						<div class="mySlides fade">
+						  <div class="numbertext">1 / 5</div>
+						  <img src="8r03.jpg" style="width:100%"width="1080" height="549">
+						</div>
+						
+						<div class="mySlides fade">
+						  <div class="numbertext">2 / 5</div>
+						  <img src="k02.jpg" style="width:100%"width="1080" height="549">
+						</div>
+						
+						<div class="mySlides fade">
+						  <div class="numbertext">3 / 5</div>
+						  <img src="8r04.jpg" style="width:100%"width="1080" height="549">
+						</div>
+						
+						<div class="mySlides fade">
+							<div class="numbertext">4/5</div>
+							<img src="gt01.jpg" style="width:100%" width="1080" height="549" >
+						  </div>
+						  
+						  <div class="mySlides fade">
+							<div class="numbertext">5/5</div>
+							<img src="8R05.jpg" style="width:100%"width="1080" height="549">
+						  </div>
+				
+						<a class="prev" onclick="plusSlides(-1)">❮</a>
+						<a class="next" onclick="plusSlides(1)">❯</a>
+						
+						</div>
+						<br>
+						
+						<div style="text-align:center">
+						  <span class="dot" onclick="currentSlide(1)"></span> 
+						  <span class="dot" onclick="currentSlide(2)"></span> 
+						  <span class="dot" onclick="currentSlide(3)"></span>
+						  <span class="dot" onclick="currentSlide(4)"></span> 
+						  <span class="dot" onclick="currentSlide(5)"></span>  
+						</div>
+						
+						<script>
+						let slideIndex = 1;
+						showSlides(slideIndex);
+						
+						function plusSlides(n) {
+						  showSlides(slideIndex += n);
+						}
+						
+						function currentSlide(n) {
+						  showSlides(slideIndex = n);
+						}
+						
+						function showSlides(n) {
+						  let i;
+						  let slides = document.getElementsByClassName("mySlides");
+						  let dots = document.getElementsByClassName("dot");
+						  if (n > slides.length) {slideIndex = 1}    
+						  if (n < 1) {slideIndex = slides.length}
+						  for (i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";  
+						  }
+						  for (i = 0; i < dots.length; i++) {
+							dots[i].className = dots[i].className.replace(" active", "");
+						  }
+						  slides[slideIndex-1].style.display = "block";  
+						  dots[slideIndex-1].className += " active";
+						}
+						</script>
+
+				
+					
 					<!-- Logo -->
 						<div id="logo">
 							<h1><a href="index.html"></a></h1>
-							
 						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">首頁</a></li>
+						<li><a href="right-sidebar - 02.html">最新消息</a></li>
+						<li class="current">
+							<a href="no-sidebar.html">車款介紹</a>
 							<ul>
-								<li><a href="index.html">首頁</a></li>
-								<li><a href="#">最新消息</a></li>
-								<li class="current">
-									<a href="left-sidebar.html">車款介紹</a>
-									<ul>
-										<li><a href="#">電動車</a></li>
-										<li><a href="#">100~249CC</a></li>
-										<li><a href="#">250~549CC</a></li>
-										<li><a href="#">550CC~</a></li>
-									</ul>
-								</li>
-								<li><a href="right-sidebar.html">服務專區</a>
-								    <ul>
-										<li><a href="#">保證事項</a></li>
-										<li><a href="#">保養指南</a></li>
-										<li><a href="#">下載專區</a></li>
-										<li><a href="#">相關影片</a></li>
-										<li><a href="#">促銷優惠</a></li>
-									</ul>
-								</li>
-								<li><a href="no-sidebar.html">經銷據點</a></li>
-							
-						</ul>
-						</nav>
-
-				</section>
+								<li><a href="#">電動車</a></li>
+								<li><a href="#">100~249CC</a></li>
+								<li><a href="#">250~549CC</a></li>
+								<li><a href="#">550CC~</a></li>
+							</ul>
+						</li>
+						<li><a href="right-sidebar.html">服務專區</a>
+							<ul>
+								<li><a href="right-sidebar.html">保證事項</a></li>
+								<li><a href="#">保養指南</a></li>
+								<li><a href="#">下載專區</a></li>
+								<li><a href="#">相關影片</a></li>
+								<li><a href="#">促銷優惠</a></li>
+							</ul>
+						</li>
+						<li><a href="no-sidebar.html">經銷據點</a></li>
+					</ul>
+				</nav>
+			</section>
 
 			<!-- Intro -->
 				<section id="intro" class="wrapper style1">
-					<div class="title">熱門車款</div>
+					<div class="title">促銷車款</div>
+					<!-- Highlights -->
+				
+					<div class="title">促銷車款</div>
 					<div class="container">
-			<!-- Highlights -->
 						<div class="row aln-center">
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-									<h3><a href="#">Aliquam diam consequat</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<a href="#" class="image featured"><img src="8r03.jpg" alt="Trulli" width="200" height="300" /></a>
+									<h3 style="font-size: 20px;"><a href="#">GSX-8R</a></h3>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><a href="no-sidebar.html" class="button style1">了解詳情</a></li>
 									</ul>
 								</section>
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<a href="#" class="image featured"><img src="vs01-1.jpg" alt="Trulli" width="200" height="300" /></a>
+									<h3 style="font-size: 20px;"><a href="#">V-STROM 250
+									</a></h3>
 									<ul class="actions">
-										<li><a href="#" class="">Learn More</a></li>
+										<li><a href="no-sidebar.html" class="button style1">了解詳情</a></li>
 									</ul>
 								</section>
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-									<h3><a href="#">Mattis tempus lorem</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<a href="#" class="image featured"><img src="h01.jpg" alt="Trulli" width="200" height="300" /></a>
+									<h3 style="font-size: 20px;"><a href="#">隼Hayabusa</a></h3>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><a href="no-sidebar.html" class="button style1">了解詳情</a></li>
 									</ul>
 								</section>
 							</div>
@@ -95,67 +267,100 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">The Details</div>
+					<div class="title">最新消息</div>
 					<div class="container">
 
 						<!-- Image -->
 							<a href="#" class="image featured">
-								<img src="images/pic01.jpg" alt="" />
+								<img src="gt01-1.jpg" alt="" />
 							</a>
 
 						<!-- Features -->
-							<section id="features">
-								<header class="style1">
-									<h2>Dolor consequat feugiat amet veroeros</h2>
-									<p>Feugiat dolor nullam orci pretium phasellus justo</p>
-								</header>
+							<section id="Features">
 								<div class="feature-list">
 									<div class="row">
 										<div class="col-6 col-12-medium">
 											<section>
-												<h3 class="icon fa-comment">Mattis velit diam vulputate</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+												<h3 class="icon fa-comment">歡慶SUZUKI全球營收創新高</h3>
+												<p>歡慶SUZUKI全球營收創新高
+
+													SUZUKI感謝一路支持的車主朋友們
+													
+													準備了全車系免費健檢及五大好禮
+													
+													陪您安心迎接2025
+													
+													新年騎車出遊好安心</p>
 											</section>
 										</div>
 										<div class="col-6 col-12-medium">
 											<section>
-												<h3 class="icon solid fa-sync">Lorem ipsum dolor sit veroeros</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+												<h3 class="icon solid fa-sync">歡慶中華隊勇奪世界冠軍 限時加碼購車金5,000元</h3>
+												<p>感謝中華隊讓我們見證歷史的一刻
+													歡慶中華隊勇奪世界冠軍
+													#GIXXER250 #GixxerSF250 #GSXR150
+													限時加碼購車金5,000元
+													只到2024/11/30日止 </p>
 											</section>
 										</div>
 										<div class="col-6 col-12-medium">
 											<section>
-												<h3 class="icon fa-image">Pretium phasellus justo lorem</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+												<h3 class="icon fa-image">世界機車旅遊達人 鐵男OG桑 賀曾利隆 寶島秘境征戰之旅</h3>
+												<p>日本「鐵男OG桑」賀曾利隆先生，於今年10/15~10/18第四度造訪台灣。
+
+
+													這次他騎著SUZUKI最全能的多功能車­­V-Strom 250SX，與台鈴車隊一行19人，一同出發，探險、旅行、發掘台灣各地美景、深入探索台灣人文與秘境，體驗V-Strom 250SX所帶來獨有的山林騎乘樂趣。</p>
 											</section>
 										</div>
 										<div class="col-6 col-12-medium">
 											<section>
-												<h3 class="icon solid fa-cog">Tempus sed pretium orci</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+												<h3 class="icon fa-image">風災關懷專案 NEX125限時加碼2000元</h3>
+												<p>風災無情，我們有情！
+
+													為了協助鄉親渡過風災難關，NEX125限時推出加碼2000元，汰舊只要63,500元起！
+													
+													換新車，保平安！購買 New NEX 125 立享：
+													
+													現金享7,000元購車金或分期享36期0利率
+													
+													再享3,000元優惠
+													
+													【汰舊限時加碼2000元風災補助購車金】</p>
 											</section>
 										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-wrench">Aliquam consequat et feugiat</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-check">Dolore laoreet aliquam mattis</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
+										
 									</div>
 								</div>
-								<ul class="actions special">
-									<li><a href="#" class="button style1 large">Get Started</a></li>
-									<li><a href="#" class="button style2 large">More Info</a></li>
-								</ul>
 							</section>
 
 					</div>
 				</section>
 
-			
+			<!-- Highlights -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">台鈴簡介</div>
+			<!-- Features -->
+			<section id="Features">
+				<div class="feature-list">
+					
+						
+							<section>
+								<h3 class="icon fa-image">關於台鈴</h3>
+								<P>台鈴工業自民國63年9月正式創立以來，
+									一直以提供國人品質優良的機車交通工具作為基本方針，
+									五十多年來，在堅持此一信念與穩健經營之下，
+									進口銷售大型重車、製造國產小車、電動機車，
+									已獲得社會大眾的良好口碑與信任支持，
+									也在公司全體上下一心貫徹「世界品質，日本重車科技」的生產理念中，
+									落實「顧客滿意度第一」， 伴隨著台灣經濟的成長，
+									持續實踐「永續經營」的理念。
+															
+									在競爭激烈的環境中，
+									台鈴工業已獲得顧客及社會各界的一致支持與肯定，
+									憑藉著最佳產品耐用與貼心服務的優勢之外，
+									更不斷創新突破、持續貫徹品質優良的經營理念，
+									台鈴工業更將與時俱進，創造領先同業的利基，
+									提供國人最先進、安全、信任的機車交通工具。</P>
+							</section>
+
+</html>
